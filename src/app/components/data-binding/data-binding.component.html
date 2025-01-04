@@ -1,0 +1,49 @@
+<p>data-binding works!</p>
+<div class="row">
+  <div class="col-6">
+    1. interpulation <br>
+
+    first name = {{firstName}}
+
+    <div>
+      roll number {{rollNumber}}
+    </div>
+
+  </div>
+
+
+  <div class="col-6">
+    <input type="text" name="fname" [value]="firstName">
+    <input type="text" name="name" [placeholder]="myPlaceholder">
+  </div>
+
+</div><br>
+<br>
+<div class="row">
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showWelcomeMessage()">Show Welcome message </button>
+  </div>
+
+  <div class="col-3">
+    <select (change)="onCityChange()">
+      <option value="Munbai">Munbai</option>
+      <option value="Pune">Pune</option>
+      <option value="Nagpur">Nagpur</option>
+    </select>
+  </div>
+</div><br>
+<div class="row">
+  <div class="col-3">
+    <input type="text" [(ngModel)]=" firstName">
+  
+  </div>
+  <div class="col-3">
+    <select [(ngModel)]="selectedCity">
+      <option value="Munbai">Munbai</option>
+      <option value="Pune">Pune</option>
+      <option value="Nagpur">Nagpur</option>
+    </select>
+    {{selectedCity}}
+  </div>
+
+</div>
