@@ -1,0 +1,32 @@
+<p>ng-for works!</p>
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityList"> {{city}}</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employeeArray; let srno = index">
+                    <td>{{srno+1}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.city}}</td>
+                    <td>{{employee.contactNo}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
