@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
@@ -9,9 +9,17 @@ import { NgForComponent } from './components/ng-for/ng-for.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AdminComponent, UserComponent, DataBindingComponent, NgIfComponent, NgForComponent],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    AdminComponent,
+    UserComponent,
+    DataBindingComponent,
+    NgIfComponent,
+    NgForComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'angular19tutorial';

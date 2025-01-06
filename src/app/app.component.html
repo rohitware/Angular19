@@ -1,11 +1,20 @@
 <h1> Angular 19 Tutorial</h1>
 
-<app-admin></app-admin>
-<app-user></app-user>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" routerLink="data-binding">Data Binding </a>
+            <a class="nav-item nav-link" routerLink="ng-if">NgIf</a>
+            <a class="nav-item nav-link" routerLink="ng-for">NgFor</a>
+        </div>
+    </div>
+</nav>
 
-<app-data-binding></app-data-binding>
-
-<app-ng-if></app-ng-if>
-
-<app-ng-for></app-ng-for>
-
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
