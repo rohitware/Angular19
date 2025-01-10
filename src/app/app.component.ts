@@ -5,6 +5,7 @@ import { UserComponent } from './components/user/user.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
+import { GetApiComponent } from './Api/get-api/get-api.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { NgForComponent } from './components/ng-for/ng-for.component';
     DataBindingComponent,
     NgIfComponent,
     NgForComponent,
+    GetApiComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

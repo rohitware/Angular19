@@ -1,0 +1,52 @@
+<p>get-api works!</p>
+<div class="row">
+    <div class="col-9">
+        <button (click)="getUsers()" class="btn btn-success">Load api </button>
+    </div>
+
+    <div class="col-3">
+        <button (click)="getProduct()" class="btn btn-success">get Product </button>
+    </div>
+
+    <div class="row">
+
+        <div class="col-9">
+            <Table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Name</th>
+                            <th>UserName</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th scope="col">Website</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(item of userList; track $index){
+                        <tr>
+                            <td>{{$index+1}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.username}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.phone}}</td>
+                            <td>{{item.website}}</td>
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </Table>
+        </div>
+
+
+        <div class="col-3">
+            <select>
+                @for (product of productList; track $index) {
+                <option [value]="product.id">{{product.title}}</option>
+                }
+            </select>
+        </div>
+    </div>
+</div>

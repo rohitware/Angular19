@@ -3,6 +3,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { SignalComponent } from './components/signal/signal.component';
+import { GetApiComponent } from './Api/get-api/get-api.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,10 @@ export const routes: Routes = [
   {
     path: "signal",
     component: SignalComponent
+  },
+
+  {
+    path: 'get-api',
+    component: GetApiComponent
   }
 ];
